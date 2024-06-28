@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<Expanse>
+
+<div class="text-center">
+    <h1 class="display-4">Expanses</h1>
+    <br />
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Value
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var expanse in Model)
+                {
+                    <tr>
+                        <td>
+                            @expanse.Id
+                        </td>
+                        <td>
+                            @expanse.Value
+                        </td>
+                        <td>
+                            @expanse.Description
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+</div>
